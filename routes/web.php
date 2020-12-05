@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AwesomeComponentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [AwesomeComponentController::class, 'index'])
+    ->name('awesome-component');
